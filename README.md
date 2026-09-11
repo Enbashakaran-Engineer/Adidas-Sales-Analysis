@@ -436,7 +436,7 @@ This page answers:
 - Sales Method
 
 <p align="center">
-  <img src="Dashboard/Retailer%20&%20Product%20performance.png" alt="Adidas Retailer and Product Performance Dashboard" width="100%">
+  <img src="Dashboard/Retailer%20%26%20Product%20Performance.png" alt="Adidas Retailer and Product Performance Dashboard" width="100%">
 </p>
 
 ### Key Insight
@@ -497,7 +497,7 @@ This page moves from historical analysis to forward-looking decision support.
 | Forecasted Profit Growth | **29.5%** |
 
 <p align="center">
-  <img src="Dashboard/Forecast%20&%20Scenario%20analysis.png" alt="Adidas Forecast and Scenario Analysis Dashboard" width="100%">
+  <img src="Dashboard/Forecast%20%26%20Scenario%20Analysis.png" alt="Adidas Forecast and Scenario Analysis Dashboard" width="100%">
 </p>
 
 ---
