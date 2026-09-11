@@ -468,7 +468,7 @@ This page answers:
 | Athletic Footwear | **37%** |
 
 <p align="center">
-  <img src="Dashboard/Pricing%20&%20Profitability.png" alt="Adidas Pricing and Profitability Dashboard" width="100%">
+  <img src="Dashboard/Pricing%20%26%20Profitability.png" alt="Adidas Pricing and Profitability Dashboard" width="100%">
 </p>
 
 ### Business Value
