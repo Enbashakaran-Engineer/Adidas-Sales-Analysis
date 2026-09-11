@@ -1,116 +1,116 @@
-# 👟 Adidas Sales Analytics
-
+# 👟 Adidas Sales Analytics Dashboard
 ### *From Raw Sales Data to Actionable Business Insights*
 
-> An end-to-end **Sales Analytics & Business Intelligence project**
-> built around Adidas sales data. The project demonstrates the complete
-> analytics lifecycle---from Excel data ingestion and Python
-> preprocessing to PostgreSQL integration, interactive Power BI
-> dashboards, forecasting, what-if scenario analysis, and business
-> recommendations.
+> An end-to-end **Data Analytics & Business Intelligence project** that transforms Adidas sales transaction data into actionable insights using **Python, SQL, PostgreSQL, Power BI, forecasting, and what-if scenario analysis**.
 
-```{=html}
 <p align="center">
-```
+
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Business%20Analysis-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Analysis-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Power
-BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-Analytics-5A2D82?style=for-the-badge)
 ![EDA](https://img.shields.io/badge/EDA-Exploratory%20Analysis-success?style=for-the-badge)
 
-```{=html}
 </p>
-```
 
-------------------------------------------------------------------------
+---
 
 # 📌 Project Overview
 
-The **Adidas Sales Analytics** project transforms raw transactional
-sales data into an interactive business intelligence solution.
+The **Adidas Sales Analytics Dashboard** is an end-to-end analytics project built to transform raw sales transactions into meaningful business insights.
 
-The objective is to understand:
+The project covers the complete analytics lifecycle:
 
--   Overall sales and profit performance
--   Year-over-year sales growth
--   Retailer contribution
--   Product category performance
--   Regional and city-level performance
--   Sales method performance
--   Pricing and profitability relationships
--   Future sales and profit expectations
--   The potential impact of price and volume changes
+- 📥 Raw sales data ingestion
+- 🔍 Exploratory Data Analysis (EDA)
+- 🧹 Data cleaning and preprocessing
+- 🧩 Feature engineering
+- 🗄 PostgreSQL database integration
+- 📈 SQL-based business analysis
+- 📊 Interactive Power BI dashboards
+- 🔮 Sales & profit forecasting
+- 🎛 What-if price and volume scenario analysis
+- 📝 Professional project report
+- 🎯 Business presentation and data storytelling
 
-The final solution combines **Python, Pandas, PostgreSQL/SQL, and Power
-BI** to create a complete analytics workflow.
+The main goal is to answer four business questions:
 
-------------------------------------------------------------------------
+> **What happened?**  
+> **Who and what is driving performance?**  
+> **How profitable is the business?**  
+> **What could happen next?**
+
+---
 
 # 🏗 Project Architecture
 
-``` text
-                 Adidas Sales Dataset
-                         │
-                         ▼
-                  Excel (.xlsx)
-                         │
-                         ▼
-                Python / Pandas
-                         │
-             ┌───────────┴───────────┐
-             │                       │
-             ▼                       ▼
-      Data Inspection          Feature Engineering
-             │                       │
-             └───────────┬───────────┘
-                         ▼
-                 Processed Dataset
-                         │
-                         ▼
-                    PostgreSQL
-                         │
-                         ▼
-                 Power BI Data Model
-                         │
-                         ▼
-                  DAX Calculations
-                         │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-     KPI Analysis   Trend Analysis   Scenario Analysis
-          │              │              │
-          └──────────────┼──────────────┘
-                         ▼
-               Interactive Dashboard
-                         │
-                         ▼
-             Business Insights & Actions
+```text
+                         Adidas Sales Data
+                                │
+                                ▼
+                       Excel (.xlsx) Dataset
+                                │
+                                ▼
+                         Python / Pandas
+                                │
+                 ┌──────────────┴──────────────┐
+                 │                             │
+                 ▼                             ▼
+          Data Inspection              Data Preprocessing
+                 │                             │
+                 └──────────────┬──────────────┘
+                                ▼
+                      Feature Engineering
+                                │
+                                ▼
+                         PostgreSQL
+                                │
+                                ▼
+                      SQL Business Analysis
+                                │
+                                ▼
+                         Power BI Model
+                                │
+                                ▼
+                         DAX Measures
+                                │
+          ┌─────────────────────┼─────────────────────┐
+          ▼                     ▼                     ▼
+   KPI & Trend Analysis   Retailer & Product   Pricing & Profit
+                                │                     │
+                                └──────────┬──────────┘
+                                           ▼
+                                Forecast & Scenarios
+                                           │
+                                           ▼
+                              Business Recommendations
 ```
 
-------------------------------------------------------------------------
+---
 
 # 📂 Dataset
 
 The project uses the **Adidas Sales Data** Excel dataset.
 
-### Dataset Size
+### Dataset Summary
 
-  Attribute                         Value
-  -------------------- ------------------
-  Records                       **9,648**
-  Original Columns                 **14**
-  Date Range             **2020 -- 2021**
-  Retailers                         **6**
-  Product Categories                **3**
-  Sales Methods                     **3**
-  Regions                           **5**
-  Cities                           **52**
+| Attribute | Value |
+|---|---:|
+| Records | **9,648** |
+| Original Columns | **14** |
+| Date Range | **2020 – 2021** |
+| Retailers | **6** |
+| Product Categories | **3** |
+| Sales Methods | **3** |
+| Regions | **5** |
+| States | **50** |
+| Cities | **52** |
 
-### Original Columns
+### Dataset Columns
 
-``` text
+```text
 Retailer
 Retailer ID
 Invoice Date
@@ -127,113 +127,107 @@ Operating Margin
 Sales Method
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🛠 Tech Stack
 
-  Category                Tools
-  ----------------------- ---------------------
-  Programming             Python
-  Data Analysis           Pandas
-  Numerical Processing    NumPy
-  Visualization / EDA     Matplotlib, Seaborn
-  Database                PostgreSQL
-  Query Language          SQL
-  Business Intelligence   Power BI
-  Calculations            DAX
-  Source Data             Microsoft Excel
-  Documentation           PDF / Report
+| Category | Technology |
+|---|---|
+| Programming | Python |
+| Data Manipulation | Pandas |
+| Numerical Analysis | NumPy |
+| Visualization / EDA | Matplotlib, Seaborn |
+| Database | PostgreSQL |
+| Query Language | SQL |
+| Business Intelligence | Power BI |
+| Calculations | DAX |
+| Source Data | Microsoft Excel |
+| Documentation | PDF |
+| Presentation | PowerPoint / PDF |
 
-------------------------------------------------------------------------
+---
 
 # 🚀 Project Workflow
 
 ## 📥 1. Data Loading
 
-The Excel dataset is loaded into Python using Pandas.
+The raw Excel dataset is imported into Python using Pandas.
 
-``` python
+```python
 import pandas as pd
 
 df = pd.read_excel("./Adidas_Sales_Data.xlsx")
 ```
 
-Initial inspection includes:
+Initial checks include:
 
--   Dataset preview
--   Dataset dimensions
--   Data types
--   Descriptive statistics
--   Missing-value checks
--   Column inspection
+- Dataset preview
+- Dataset shape
+- Column names
+- Data types
+- Descriptive statistics
+- Missing values
+- Duplicate records
 
-------------------------------------------------------------------------
+---
 
 ## 🔍 2. Exploratory Data Analysis
 
-The preprocessing notebook performs initial data exploration using:
+The preprocessing notebook uses:
 
-``` python
+```python
 df.head()
 df.info()
-df.describe(include='all')
+df.describe(include="all")
 df.isnull().sum()
 ```
 
-This helps understand:
+The EDA stage was used to understand:
 
--   Dataset structure
--   Data types
--   Numeric distributions
--   Missing values
--   Categorical fields
--   Overall data quality
+- Data structure
+- Numerical fields
+- Categorical fields
+- Date information
+- Data quality
+- Sales and profit distributions
 
-### Data Quality Result
+### Data Quality
 
-The source dataset contains:
+The source dataset was validated for missing and duplicate records before further transformation.
 
--   **0 missing values**
--   **0 duplicate rows**
-
-------------------------------------------------------------------------
+---
 
 ## 🧹 3. Data Cleaning & Standardization
 
-Column names were standardized to make them easier to work with in
-Python and SQL.
+Column names were standardized to make the data easier to use across Python, SQL and Power BI.
 
-``` python
+```python
 df.columns = df.columns.str.lower()
-df.columns = df.columns.str.replace(' ','_')
+df.columns = df.columns.str.replace(" ", "_")
 ```
 
-For example:
+Examples:
 
-``` text
-Invoice Date     → invoice_date
-Total Sales      → total_sales
-Operating Profit → operating_profit
-Product Category → product_category
+```text
+Invoice Date       → invoice_date
+Total Sales        → total_sales
+Operating Profit   → operating_profit
+Product Category   → product_category
 ```
 
-------------------------------------------------------------------------
+---
 
 # 📅 4. Feature Engineering
 
-### Date Conversion
+The invoice date was converted into a proper datetime format:
 
-The invoice date was converted into a proper datetime field:
-
-``` python
-df['invoice_date'] = pd.to_datetime(df['invoice_date'])
+```python
+df["invoice_date"] = pd.to_datetime(df["invoice_date"])
 ```
 
-### Date Features
+Additional date features were created:
 
-The following analytical features were created:
-
-``` text
+```text
 year
 month
 day
@@ -244,425 +238,381 @@ quarter
 is_weekend
 ```
 
-These features support time-based analysis such as:
+These features support:
 
--   Monthly sales trends
--   Year comparisons
--   Quarterly performance
--   Weekday/weekend analysis
--   Time-based dashboard filtering
+- Monthly trend analysis
+- Year-over-year analysis
+- Quarterly analysis
+- Weekday/weekend comparisons
+- Forecasting
 
-------------------------------------------------------------------------
+---
 
-# 💰 5. Revenue & Profit Features
+# 💰 5. Business Feature Engineering
 
-Two additional business metrics were engineered.
+Additional analytical metrics were created.
 
 ### Profit Per Unit
 
-``` python
-df['profit_per_unit'] = (
-    df['operating_profit'] / df['units_sold']
+```python
+df["profit_per_unit"] = (
+    df["operating_profit"] / df["units_sold"]
 )
 ```
 
 ### Sales Per Unit
 
-``` python
-df['sales_per_unit'] = (
-    df['total_sales'] / df['units_sold']
+```python
+df["sales_per_unit"] = (
+    df["total_sales"] / df["units_sold"]
 )
 ```
 
-These metrics support the pricing and profitability analysis in Power
-BI.
+These features are used to support pricing and profitability analysis.
 
-------------------------------------------------------------------------
+---
 
 # 🗄 6. PostgreSQL Integration
 
-After preprocessing, the DataFrame is loaded into PostgreSQL.
+After preprocessing, the processed dataset is loaded into PostgreSQL.
 
-The project uses:
+The workflow is:
 
--   SQLAlchemy
--   psycopg2
--   PostgreSQL
-
-The processed data is stored in a database table and then used as the
-analytical source for the BI layer.
-
-``` text
+```text
 Python / Pandas
        ↓
 Processed DataFrame
        ↓
-SQLAlchemy
+SQLAlchemy / psycopg2
        ↓
 PostgreSQL
+       ↓
+SQL Business Analysis
        ↓
 Power BI
 ```
 
-> **Security note:** Database passwords and local credentials are
-> intentionally not included in this README.
+PostgreSQL provides structured storage and allows the cleaned data to be used as a database-backed analytics source.
 
-------------------------------------------------------------------------
+> **Security:** Database credentials and passwords should never be committed to GitHub.
 
-# 📊 7. Power BI Dashboard
+---
 
-The Power BI solution is organized into **five interactive pages**:
+# 📈 7. SQL Business Analysis
 
-1.  🏠 Sales Analytics Dashboard --- Home
-2.  📈 Executive Overview
-3.  🏪 Retailer & Product Performance
-4.  💰 Pricing & Profitability
-5.  🔮 Forecast & Scenario Analysis
+SQL is used to answer business questions before and alongside Power BI analysis.
 
-------------------------------------------------------------------------
+### Example Analysis Areas
+
+- Total Sales
+- Total Profit
+- Monthly Sales
+- Sales by Retailer
+- Sales by Product Category
+- Sales by Region
+- Sales by City
+- Sales by Sales Method
+- Profitability Analysis
+- Product Performance
+- Sales Contribution
+
+The SQL script included in the repository is:
+
+```text
+Analysis_through_sql.sql
+```
+
+---
+
+# 📊 8. Power BI Dashboard
+
+The dashboard is organized into multiple business-focused pages.
+
+### Dashboard Navigation
+
+```text
+🏠 Home
+   │
+   ├── 📈 Executive Overview
+   │
+   ├── 🏪 Retailer & Product Performance
+   │
+   ├── 💰 Pricing & Profitability
+   │
+   └── 🔮 Forecast & Scenario Analysis
+```
+
+---
 
 # 🏠 Dashboard Home
 
-The home page acts as the navigation hub for the complete dashboard.
+The home page works as the main navigation hub.
 
 It provides:
 
--   Overall KPI summary
--   Dashboard navigation
--   Executive Overview access
--   Retailer & Product Performance access
--   Pricing & Profitability access
--   Forecast & Scenario Analysis access
--   Key business themes and navigation shortcuts
+- Overall KPI summary
+- Dashboard navigation
+- Executive Overview
+- Retailer & Product Performance
+- Pricing & Profitability
+- Forecast & Scenario Analysis
+- Project branding and business themes
 
-```{=html}
 <p align="center">
-```
-`<img src="Dashboard/dashboard-home.png" alt="Adidas Sales Analytics Dashboard Home" width="100%">`{=html}
-```{=html}
+  <img src="Dashboard/Home.png" alt="Adidas Sales Analytics Dashboard Home" width="100%">
 </p>
-```
 
-------------------------------------------------------------------------
+---
 
 # 📈 Executive Overview
 
-The Executive Overview provides a high-level view of business
-performance.
+The Executive Overview gives management a quick view of overall business performance.
 
 ### Key KPIs
 
-  KPI                      Value
-  --------------- --------------
-  Total Sales       **\$120.2M**
-  Total Profit       **\$47.2M**
-  Units Sold           **2.48M**
-  Profit Margin        **\~39%**
-  Retailers                **6**
-  Sales Growth         **79.9%**
+| KPI | Dashboard Value |
+|---|---:|
+| Total Sales | **$120.2M** |
+| Total Profit | **$47.2M** |
+| Units Sold | **2.48M** |
+| Profit Margin | **~39%** |
+| Number of Retailers | **6** |
+| Sales Growth | **79.9%** |
 
-### Analysis Included
+### Visual Analysis
 
--   Monthly Sales Trend
--   Sales by Category
--   Sales by City
--   Sales vs Profit
--   Sales Method Performance
+- Monthly Sales Trend
+- Sales by Category
+- Sales by City
+- Sales vs Profit
+- Sales Method Performance
 
-```{=html}
 <p align="center">
-```
-`<img src="Dashboard/Executive Overview.png" alt="Adidas Executive Overview Dashboard" width="100%">`{=html}
-```{=html}
+  <img src="Dashboard/Executive%20Overview.png" alt="Adidas Executive Overview Dashboard" width="100%">
 </p>
-```
-### Key Insight
 
-The dashboard shows strong growth in the 2021 period compared with 2020,
-while also highlighting category, city, and sales-method performance.
+### Key Observations
 
-------------------------------------------------------------------------
+- Total sales are approximately **$120.17M**.
+- Operating profit is approximately **$47.22M**.
+- Around **2.48M units** were sold.
+- Street Footwear is the highest-selling category.
+- Online is the highest-performing sales method.
+- New York is the highest-performing city in the dashboard.
+
+---
 
 # 🏪 Retailer & Product Performance
 
-This page focuses on the question:
+This page answers:
 
-> **"Who and what is driving our sales?"**
+> **“Who drives our sales?”**
 
-### Analysis Included
+### Retailer Ranking
 
--   Sales by Retailer
--   Product Category Performance
--   Regional Performance
--   Retailer Sales Contribution
--   Interactive Year filter
--   Region filter
--   City filter
--   Product Category filter
--   Sales Method filter
+| Retailer | Approx. Sales |
+|---|---:|
+| West Gear | **$32.4M** |
+| Foot Locker | **$29.0M** |
+| Sports Direct | **$24.6M** |
+| Kohl's | **$13.5M** |
+| Walmart | **$10.5M** |
+| Amazon | **$10.1M** |
 
-### Retailer Performance
+### Product Categories
 
-The leading retailers in the dashboard include:
+| Category | Approx. Sales |
+|---|---:|
+| Street Footwear | **$44.9M** |
+| Apparel | **$40.4M** |
+| Athletic Footwear | **$34.9M** |
 
-1.  **West Gear**
-2.  **Foot Locker**
-3.  **Sports Direct**
-4.  **Kohl's**
-5.  **Walmart**
-6.  **Amazon**
+### Interactive Filters
 
-```{=html}
+- Year
+- Region
+- City
+- Product Category
+- Sales Method
+
 <p align="center">
-```
-`<img src="Dashboard/Retailer & Product Performance.png" alt="Adidas Retailer and Product Performance Dashboard" width="100%">`{=html}
-```{=html}
+  <img src="Dashboard/Retailer%20&%20Product%20performance.png" alt="Adidas Retailer and Product Performance Dashboard" width="100%">
 </p>
-```
+
 ### Key Insight
 
-The dashboard identifies a strong contribution from the leading
-retailers, helping management understand retailer concentration and
-partnership priorities.
+The top three retailers contribute roughly **70% of total sales**, highlighting the importance of strategic retailer relationships and revenue diversification.
 
-------------------------------------------------------------------------
+---
 
 # 💰 Pricing & Profitability
 
 This page answers:
 
-> **"Are we pricing our products effectively and profitably?"**
+> **“Are we pricing our products correctly?”**
 
-### Visual Analysis
+### Visuals
 
--   Price vs Units Sold
--   Price vs Profit
--   Category Profit Margin
--   Profit Per Unit
--   Sales vs Profit Margin
+- Price vs Units Sold
+- Price vs Profit
+- Category Profit Margin
+- Profit Per Unit
+- Sales vs Profit Margin
 
-### Category Margin
+### Category Profit Margin
 
-The dashboard shows approximately:
+| Category | Approx. Margin |
+|---|---:|
+| Street Footwear | **40%** |
+| Apparel | **40%** |
+| Athletic Footwear | **37%** |
 
-  Category                 Margin
-  ------------------- -----------
-  Street Footwear       **\~40%**
-  Apparel               **\~40%**
-  Athletic Footwear     **\~37%**
-
-```{=html}
 <p align="center">
-```
-`<img src="Dashboard/Pricing & Profitability.png"" alt="Adidas Pricing and Profitability Dashboard" width="100%">`{=html}
-```{=html}
+  <img src="Dashboard/Pricing%20&%20Profitability.png" alt="Adidas Pricing and Profitability Dashboard" width="100%">
 </p>
-```
+
 ### Business Value
 
 The analysis helps identify:
 
--   High-sales products
--   High-margin products
--   Low-margin products
--   Price-performance relationships
--   Products requiring pricing or profitability review
+- High-sales / high-margin products
+- High-sales / low-margin products
+- Low-sales / high-margin opportunities
+- Low-sales / low-margin products
+- Price-performance relationships
 
-------------------------------------------------------------------------
+---
 
 # 🔮 Forecast & Scenario Analysis
 
-The final page moves from historical reporting toward forward-looking
-analysis.
+This page moves from historical analysis to forward-looking decision support.
 
 ### Forecast KPIs
 
-The dashboard displays:
+| Metric | Dashboard Value |
+|---|---:|
+| Forecasted Sales | **$66.2M** |
+| Forecasted Sales Growth | **24.0%** |
+| Forecasted Profit | **$27.9M** |
+| Forecasted Profit Growth | **29.5%** |
 
--   Forecasted Sales for the next 6 months
--   Forecasted Profit
--   Growth versus previous 6-month period
-
-Current dashboard values include approximately:
-
-  Metric                       Dashboard Value
-  -------------------------- -----------------
-  Forecasted Sales                 **\$66.2M**
-  Forecasted Sales Growth            **24.0%**
-  Forecasted Profit                **\$27.9M**
-  Forecasted Profit Growth           **29.5%**
-
-```{=html}
 <p align="center">
-```
-`<img src="Dashboard/Forecast & Scenario Analysis.png"" alt="Adidas Forecast and Scenario Analysis Dashboard" width="100%">`{=html}
-```{=html}
+  <img src="Dashboard/Forecast%20&%20Scenario%20analysis.png" alt="Adidas Forecast and Scenario Analysis Dashboard" width="100%">
 </p>
-```
 
-------------------------------------------------------------------------
+---
 
-# 🎛 What-If Scenario Analysis
+# 🎛 What-If Analysis
 
-Two interactive parameters were created:
+Power BI What-If parameters were used to simulate changes in business assumptions.
 
-### 1. Price Change
-
-Users can change the assumed price percentage and observe the estimated
-sales impact.
+## Price Change Scenario
 
 Example shown in the dashboard:
 
-``` text
-Price Change = 9%
+```text
+Price Change = +9%
 Estimated Sales ≈ $58.2M
 ```
 
-### 2. Volume Change
+## Volume Change Scenario
 
-Users can change the assumed sales volume percentage.
-
-Example:
-
-``` text
-Volume Change = 10%
+```text
+Volume Change = +10%
 Estimated Sales ≈ $58.7M
 ```
 
-### 3. Combined Scenario
+## Combined Scenario
 
-The dashboard combines price and volume assumptions.
-
-Example shown:
-
-``` text
-Price Change  = 9%
-Volume Change = 10%
+```text
+Price Change  = +9%
+Volume Change = +10%
 
 Estimated Sales ≈ $63.98M
 ```
 
-### Why This Matters
+### Why What-If Analysis?
 
-Instead of only answering **"What happened?"**, the dashboard can also
-support:
+What-if analysis allows decision makers to test different assumptions before implementing pricing or sales strategies.
 
-> **"What could happen if we change our business assumptions?"**
+---
 
-This makes the dashboard useful for scenario planning and management
-decision-making.
+# 📌 Key Business Insights
 
-------------------------------------------------------------------------
+### 💵 Overall Business Performance
 
-# 📈 Key Business Insights
-
-### 💰 Overall Performance
-
-The dataset represents approximately:
-
--   **\$120.17M Total Sales**
--   **\$47.22M Operating Profit**
--   **2.48M Units Sold**
+- Total Sales: approximately **$120.17M**
+- Operating Profit: approximately **$47.22M**
+- Units Sold: approximately **2.48M**
+- Overall operating margin: approximately **39.3%**
 
 ### 🏪 Retailer Performance
 
-**West Gear** is the leading retailer in the dashboard, followed by
-**Foot Locker** and **Sports Direct**.
+**West Gear** is the largest retailer by sales.
 
 ### 👟 Product Performance
 
-**Street Footwear** is the largest product category by sales.
+**Street Footwear** is the strongest product category by sales and profit contribution.
 
 ### 🌎 Regional Performance
 
-The dashboard enables comparison across:
+The **West** is the highest-performing region in the analysis.
 
--   Midwest
--   Northeast
--   South
--   Southeast
--   West
+### 🛒 Sales Channel
 
-The **West** is the strongest-performing region in the dashboard
-analysis.
+**Online** is the strongest sales method in the dashboard.
 
-### 🛒 Sales Method
+### 📊 Retailer Concentration
 
-Online sales represent the strongest sales method in the Executive
-Overview.
+The top three retailers represent roughly **70% of total sales**, creating both a strength and a concentration risk.
 
-### 📊 Profitability
+### 🔮 Future Opportunity
 
-Street Footwear and Apparel show approximately 40% aggregate margins,
-while Athletic Footwear is comparatively lower at approximately 37%.
+Forecast and scenario analysis provide a framework for evaluating potential sales and profit outcomes under different assumptions.
 
-### 🔮 Future Planning
-
-Forecast and what-if analysis allow management to evaluate potential
-changes in sales under different price and volume assumptions.
-
-------------------------------------------------------------------------
+---
 
 # 🎯 Business Recommendations
 
-Based on the dashboard analysis:
+### 1. Strengthen Strategic Retailer Relationships
 
-### 1. Strengthen Key Retailer Relationships
+Continue prioritizing high-contributing retailers such as West Gear, Foot Locker and Sports Direct.
 
-Prioritize strategic relationships with the highest-contributing
-retailers.
+### 2. Invest in High-Performing Categories
 
-### 2. Continue Investing in Strong Product Categories
+Maintain strong inventory, marketing and distribution for categories such as Street Footwear.
 
-Maintain focus on high-performing product categories while monitoring
-their profitability.
+### 3. Improve Online Performance
 
-### 3. Review Lower-Margin Products
+Continue developing digital sales channels because Online is the leading sales method in the analysis.
 
-Investigate pricing, cost structure, and product positioning for
-categories with comparatively lower margins.
+### 4. Investigate Lower-Performing Regions
 
-### 4. Strengthen Digital Sales
+Study lower-performing regions for product availability, demand, pricing and distribution opportunities.
 
-Online sales are a major contributor, creating an opportunity to
-continue improving digital sales channels.
+### 5. Improve Margin Management
 
-### 5. Focus on Regional Opportunities
+Use the pricing and profitability dashboard to identify high-revenue products with weaker margins.
 
-Investigate lower-performing regions and cities to identify gaps in
-demand, distribution, pricing, or product availability.
+### 6. Use Scenario Planning
 
-### 6. Use Scenario Planning Before Major Decisions
+Use price and volume what-if parameters before making major commercial decisions.
 
-Use the Power BI What-If parameters to evaluate price and volume
-assumptions before implementing sales or pricing strategies.
+### 7. Diversify Revenue Sources
 
-------------------------------------------------------------------------
+Reduce dependency on a small number of major retailers over time by developing additional channels and partnerships.
 
-# 📁 Project Structure
+---
 
-A recommended repository structure for this project is:
+# 📁 Repository Structure
 
-``` text
+The repository follows this structure:
+
+```text
 Adidas-Sales-Analytics/
 │
-├── 📂 Dataset/
-│   └── Adidas_Sales_Data.xlsx
-│
-├── 📂 Python/
-│   └── Adidas_Sales_Preprocessing.ipynb
-│
-├── 📂 SQL/
-│   └── queries.sql
-│
-├── 📂 PowerBI/
-│   └── Adidas_Sales_Analytics.pbix
-│
-├── 📂 Report/
-│   └── Adidas_Sales_Analytics_Project_Report.pdf
-│
-├── 📂 Presentation/
-│   └── Presentation.pdf
+├── 📂 Dashboard/
+│   └── Dashboard.pbix
 │
 ├── 📂 Images/
 │   ├── dashboard-home.png
@@ -671,161 +621,175 @@ Adidas-Sales-Analytics/
 │   ├── pricing-profitability.png
 │   └── forecast-scenario-analysis.png
 │
-└── README.md
+├── 📄 Adidas-Sales-Analytics-Presentation.pdf
+├── 📄 Adidas_Sales_Analytics_Project_Report.pdf
+├── 📊 Adidas_Sales_Data.xlsx
+├── 🐍 Adidas_Sales_Preprocessing.ipynb
+├── 🗄 Analysis_through_sql.sql
+├── 📜 LICENSE
+└── 📘 README.md
 ```
 
-> Rename or remove files in this structure according to the files
-> actually committed to your repository.
+---
 
-------------------------------------------------------------------------
+# ▶️ How to Run the Project
 
-# 💻 Installation
-
-Clone the repository:
-
-``` bash
-git clone https://github.com/yourusername/Adidas-Sales-Analytics.git
-```
-
-Move into the project:
-
-``` bash
-cd Adidas-Sales-Analytics
-```
-
-Install the Python dependencies:
-
-``` bash
-pip install pandas numpy matplotlib seaborn sqlalchemy psycopg2-binary openpyxl
-```
-
-------------------------------------------------------------------------
-
-# ▶️ How to Run
-
-### Step 1 --- Prepare the Dataset
-
-Place:
-
-``` text
-Adidas_Sales_Data.xlsx
-```
-
-inside the `Dataset` or working directory expected by the notebook.
-
-### Step 2 --- Run Python Preprocessing
+## Step 1 — Dataset
 
 Open:
 
-``` text
-Python/Adidas_Sales_Preprocessing.ipynb
+```text
+Adidas_Sales_Data.xlsx
 ```
 
-Run the cells in order to:
+This is the raw source dataset.
 
--   Load the dataset
--   Inspect the data
--   Validate data quality
--   Standardize column names
--   Convert dates
--   Create date features
--   Create revenue/profit features
--   Load the processed data into PostgreSQL
+## Step 2 — Python Preprocessing
 
-### Step 3 --- Configure PostgreSQL
+Open:
 
-Create the required database and update the local connection settings in
-your own environment.
-
-**Do not commit passwords or credentials to GitHub.**
-
-### Step 4 --- Open Power BI
-
-Open the Power BI `.pbix` file and refresh the data connection if
-required.
-
-### Step 5 --- Explore the Dashboard
-
-Navigate through:
-
-``` text
-Home
- ↓
-Executive Overview
- ↓
-Retailer & Product Performance
- ↓
-Pricing & Profitability
- ↓
-Forecast & Scenario Analysis
+```text
+Adidas_Sales_Preprocessing.ipynb
 ```
 
-------------------------------------------------------------------------
+Run the notebook to perform:
+
+- Data loading
+- Data inspection
+- Data cleaning
+- Date conversion
+- Feature engineering
+- Database loading
+
+## Step 3 — SQL Analysis
+
+Open:
+
+```text
+Analysis_through_sql.sql
+```
+
+Execute the SQL queries in PostgreSQL against the processed dataset.
+
+## Step 4 — Power BI
+
+Open:
+
+```text
+Dashboard/Dashboard.pbix
+```
+
+Refresh the data connection when required.
+
+## Step 5 — Report & Presentation
+
+Review:
+
+```text
+Adidas_Sales_Analytics_Project_Report.pdf
+Adidas-Sales-Analytics-Presentation.pdf
+```
+
+---
+
+# 💡 Example DAX Measures
+
+The Power BI dashboard uses dynamic measures for KPI and scenario calculations.
+
+### Total Sales
+
+```DAX
+Total Sales =
+SUM(public_customer[total_sales])
+```
+
+### Total Profit
+
+```DAX
+Total Profit =
+SUM(public_customer[operating_profit])
+```
+
+### Profit Margin
+
+```DAX
+Profit Margin =
+DIVIDE(
+    [Total Profit],
+    [Total Sales]
+)
+```
+
+The report also includes dynamic calculations for growth, forecasting and what-if scenarios.
+
+---
 
 # 📚 Skills Demonstrated
 
--   ✔ Python
--   ✔ Pandas
--   ✔ Data Cleaning
--   ✔ Data Preprocessing
--   ✔ Feature Engineering
--   ✔ Exploratory Data Analysis
--   ✔ SQL
--   ✔ PostgreSQL
--   ✔ Database Integration
--   ✔ Power BI
--   ✔ DAX
--   ✔ KPI Development
--   ✔ Data Visualization
--   ✔ Dashboard Design
--   ✔ Forecasting
--   ✔ What-If Analysis
--   ✔ Business Analysis
--   ✔ Data Storytelling
+- ✔ Python
+- ✔ Pandas
+- ✔ NumPy
+- ✔ Data Cleaning
+- ✔ Data Wrangling
+- ✔ Feature Engineering
+- ✔ Exploratory Data Analysis
+- ✔ SQL
+- ✔ PostgreSQL
+- ✔ Database Integration
+- ✔ Power BI
+- ✔ DAX
+- ✔ KPI Development
+- ✔ Dashboard Design
+- ✔ Forecasting
+- ✔ What-If Analysis
+- ✔ Business Intelligence
+- ✔ Data Storytelling
+- ✔ Business Recommendations
 
-------------------------------------------------------------------------
+---
 
 # 🎓 Learning Outcomes
 
-This project demonstrates practical experience in:
+This project demonstrates the ability to:
 
--   Working with a real-world structured sales dataset
--   Performing data quality checks
--   Preparing data using Python/Pandas
--   Engineering analytical features
--   Integrating processed data with PostgreSQL
--   Building Power BI analytical dashboards
--   Creating dynamic KPI measures
--   Performing retailer, product, regional and pricing analysis
--   Building forecast and scenario analysis
--   Translating analytical results into business recommendations
--   Communicating insights through data storytelling
+- Work with structured sales data
+- Perform data quality validation
+- Preprocess data using Python
+- Engineer analytical features
+- Store and query data using PostgreSQL
+- Perform business analysis using SQL
+- Build interactive Power BI dashboards
+- Develop dynamic DAX measures
+- Perform pricing and profitability analysis
+- Create forecasting and scenario analysis
+- Translate data into business recommendations
+- Present analytical findings professionally
 
-------------------------------------------------------------------------
+---
 
 # 🔮 Future Improvements
 
-Potential extensions include:
+Potential future enhancements include:
 
--   🤖 Machine Learning-based demand forecasting
--   📦 Product-level demand prediction
--   📊 Automated ETL pipeline
--   ☁️ Cloud database integration
--   🔄 Automated Power BI refresh
--   📡 Near-real-time analytics
--   🧠 Customer segmentation
--   📦 Inventory optimization
--   💹 Price elasticity analysis
--   🌐 Streamlit analytical application
--   🔌 API-based data ingestion
+- 🤖 Machine Learning-based sales forecasting
+- 📦 Product-level demand prediction
+- 🧠 Customer segmentation
+- 📦 Inventory optimization
+- 💹 Price elasticity analysis
+- 🔄 Automated ETL pipeline
+- ☁️ Cloud database integration
+- 📡 Near-real-time analytics
+- 🔌 API-based data ingestion
+- 🌐 Streamlit analytics application
+- 🔄 Automated Power BI refresh
 
-------------------------------------------------------------------------
+---
 
 # 👨‍💻 Author
 
 **Enbashakaran**
 
-**Data Analyst \| Business Intelligence \| Python \| SQL \| Power BI**
+**Data Analyst | Business Intelligence | Python | SQL | Power BI**
 
 📧 **enbashakaran04@gmail.com**
 
@@ -833,21 +797,16 @@ Potential extensions include:
 
 💻 [GitHub](https://github.com/Enbashakaran-Engineer)
 
-------------------------------------------------------------------------
+---
 
 # ⭐ Support
 
-If you found this project useful, consider giving the repository a ⭐ on
-GitHub.
+If you found this project useful, consider giving the repository a ⭐ on GitHub.
 
-It helps others discover the project and supports continued development.
-
-------------------------------------------------------------------------
+---
 
 ## 📜 License
 
-This project is intended for learning, portfolio, and demonstration
-purposes.
+This project is licensed under the **MIT License**.
 
-If you publish it under the MIT License, add the standard MIT `LICENSE`
-file to the repository.
+See the [`LICENSE`](LICENSE) file for details.
