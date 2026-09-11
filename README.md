@@ -338,7 +338,7 @@ It provides:
 ```{=html}
 <p align="center">
 ```
-`<img src="Images/dashboard-home.png" alt="Adidas Sales Analytics Dashboard Home" width="100%">`{=html}
+`<img src="Dashboard/dashboard-home.png" alt="Adidas Sales Analytics Dashboard Home" width="100%">`{=html}
 ```{=html}
 </p>
 ```
@@ -372,7 +372,7 @@ performance.
 ```{=html}
 <p align="center">
 ```
-`<img src="Images/executive-overview.png" alt="Adidas Executive Overview Dashboard" width="100%">`{=html}
+`<img src="Dashboard/Executive Overview.png" alt="Adidas Executive Overview Dashboard" width="100%">`{=html}
 ```{=html}
 </p>
 ```
@@ -415,7 +415,7 @@ The leading retailers in the dashboard include:
 ```{=html}
 <p align="center">
 ```
-`<img src="Images/retailer-product-performance.png" alt="Adidas Retailer and Product Performance Dashboard" width="100%">`{=html}
+`<img src="Dashboard/Retailer & Product Performance.png" alt="Adidas Retailer and Product Performance Dashboard" width="100%">`{=html}
 ```{=html}
 </p>
 ```
@@ -454,7 +454,7 @@ The dashboard shows approximately:
 ```{=html}
 <p align="center">
 ```
-`<img src="Images/pricing-profitability.png" alt="Adidas Pricing and Profitability Dashboard" width="100%">`{=html}
+`<img src="Dashboard/Pricing & Profitability.png"" alt="Adidas Pricing and Profitability Dashboard" width="100%">`{=html}
 ```{=html}
 </p>
 ```
@@ -495,7 +495,7 @@ Current dashboard values include approximately:
 ```{=html}
 <p align="center">
 ```
-`<img src="Images/forecast-scenario-analysis.png" alt="Adidas Forecast and Scenario Analysis Dashboard" width="100%">`{=html}
+`<img src="Dashboard/Forecast & Scenario Analysis.png"" alt="Adidas Forecast and Scenario Analysis Dashboard" width="100%">`{=html}
 ```{=html}
 </p>
 ```
